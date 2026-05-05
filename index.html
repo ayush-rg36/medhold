@@ -965,6 +965,77 @@
     .contact-info .item { grid-template-columns: 1fr; gap: 0.5rem; }
     .footer-inner { flex-direction: column; text-align: center; }
   }
+
+  /* THERAPEUTIC AREAS */
+  .areas { background: var(--cream-warm); }
+  .areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+  }
+  .area-card {
+    text-align: center;
+    padding: 2.4rem 1.4rem 2rem;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    transition: transform 0.35s, box-shadow 0.35s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .area-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(26,111,168,0.12);
+  }
+  .area-icon {
+    width: 78px;
+    height: 78px;
+    margin-bottom: 1.2rem;
+    flex-shrink: 0;
+  }
+  .area-icon svg { width: 100%; height: 100%; }
+  .area-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.55rem;
+  }
+  .area-desc {
+    font-size: 0.84rem;
+    color: var(--muted);
+    line-height: 1.65;
+    flex: 1;
+  }
+  .area-tags {
+    margin-top: 1.1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    justify-content: center;
+  }
+  .area-tag {
+    font-size: 0.61rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: rgba(26,111,168,0.07);
+    color: var(--navy);
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    border: 1px solid rgba(26,111,168,0.14);
+  }
+  @media (max-width: 900px) {
+    .areas-grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+  }
+  @media (max-width: 500px) {
+    .areas-grid { gap: 0.8rem; }
+    .area-card { padding: 1.4rem 0.9rem 1.3rem; }
+    .area-icon { width: 60px; height: 60px; margin-bottom: 1rem; }
+    .area-title { font-size: 0.9rem; }
+    .area-desc { font-size: 0.79rem; }
+  }
 </style>
 </head>
 <body>
@@ -1047,10 +1118,10 @@
 
     <div class="about-grid">
       <div class="founder-card reveal">
-        <div class="name">Sanjeev Dhuria</div>
-        <div class="title">Founder & CEO</div>
-        <div style="display:inline-block; background: rgba(90,170,212,0.15); border: 1px solid rgba(90,170,212,0.3); color: var(--accent-light); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 1.2rem;">25+ Years · Multiple Pharmaceutical Organisations</div>
-        <div class="bio">Sanjeev Dhuria brings over 25 years of deep pharmaceutical industry experience to Medhold Health Care. Over the course of his career, he has worked with and built lasting partnerships across a wide range of pharmaceutical organisations — from large national manufacturers to specialised regional companies — giving Medhold access to a broad, trusted, and rigorously vetted product network. His work is guided by a single principle — that a distributor's word must be as reliable as the medicine he supplies. Under his leadership, Medhold has established itself as a dependable partner for healthcare professionals who demand authenticity, timely service, and uncompromising integrity.</div>
+        <div class="name">The Founding Vision</div>
+        <div class="title">Leadership & CEO</div>
+        <div style="display:inline-block; background: rgba(90,170,212,0.15); border: 1px solid rgba(90,170,212,0.3); color: var(--accent-light); font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 1rem; border-radius: 999px; margin-bottom: 1.2rem;">25 Years of Experience · Multiple Pharmaceutical Organisations</div>
+        <div class="bio">Our leadership brings over 25 years of deep pharmaceutical industry experience to Medhold Health Care. Over the course of this journey, we have worked with and built lasting partnerships across a wide range of pharmaceutical organisations — from large national manufacturers to specialised regional companies — giving Medhold access to a broad, trusted, and rigorously vetted product network. The founding vision is guided by a single principle — that a distributor's word must be as reliable as the medicine it supplies. Under our leadership, Medhold has established itself as a dependable partner for healthcare professionals who demand authenticity, timely service, and uncompromising integrity.</div>
       </div>
 
       <div class="about-text reveal">
@@ -1062,7 +1133,7 @@
         <div class="stats-row">
           <div class="stat">
             <div class="num">25+</div>
-            <div class="lbl">Years Experience</div>
+            <div class="lbl">Years of Experience</div>
           </div>
           <div class="stat">
             <div class="num">10</div>
@@ -1074,6 +1145,183 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- THERAPEUTIC AREAS -->
+<section class="areas">
+  <div class="container">
+    <div class="section-head reveal">
+      <div>
+        <div class="eyebrow">What We Distribute</div>
+        <h2>Therapeutic <em>areas</em> we cover.</h2>
+      </div>
+      <p>Our portfolio spans eight key medical specialities — every product carefully sourced to meet the clinical needs of the doctors we serve across North India.</p>
+    </div>
+    <div class="areas-grid">
+
+      <!-- Antibiotics -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M21 31H59Q70 31 70 40Q70 49 59 49H21Q10 49 10 40Q10 31 21 31Z" fill="#FFD7D7"/>
+            <path d="M40 31H59Q70 31 70 40Q70 49 59 49H40Z" fill="#E05555"/>
+            <path d="M21 31H59Q70 31 70 40Q70 49 59 49H21Q10 49 10 40Q10 31 21 31Z" stroke="#C43030" stroke-width="2.2" fill="none"/>
+            <line x1="40" y1="31" x2="40" y2="49" stroke="#C43030" stroke-width="1.8"/>
+            <ellipse cx="20" cy="63" rx="8.5" ry="4.5" transform="rotate(-22 20 63)" fill="#5AAAD4" stroke="#1a6fa8" stroke-width="1.4"/>
+            <ellipse cx="60" cy="64" rx="8" ry="4.5" transform="rotate(18 60 64)" fill="#F9A852" stroke="#D4840A" stroke-width="1.4"/>
+          </svg>
+        </div>
+        <div class="area-title">Antibiotics</div>
+        <p class="area-desc">Broad-spectrum cephalosporins for respiratory, urinary, ENT, skin, and paediatric bacterial infections.</p>
+        <div class="area-tags">
+          <span class="area-tag">AUDCEF-500</span>
+          <span class="area-tag">CEFHOLD 100</span>
+        </div>
+      </div>
+
+      <!-- Analgesics -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="12" y="20" width="56" height="40" rx="10" fill="#E8F0FF" stroke="#4A7BE8" stroke-width="2.2"/>
+            <path d="M44 28L36 43H42L36 54L50 37H44Z" fill="#F9A852" stroke="#D4840A" stroke-width="1.2" stroke-linejoin="round"/>
+            <circle cx="20" cy="20" r="5" fill="#5AAAD4"/>
+            <circle cx="60" cy="20" r="5" fill="#5AAAD4"/>
+            <circle cx="20" cy="60" r="5" fill="#5AAAD4"/>
+            <circle cx="60" cy="60" r="5" fill="#5AAAD4"/>
+          </svg>
+        </div>
+        <div class="area-title">Analgesics</div>
+        <p class="area-desc">Triple-action pain relief — anti-inflammatory, analgesic and enzyme activity for musculoskeletal conditions.</p>
+        <div class="area-tags">
+          <span class="area-tag">FIGNODOL-SP</span>
+        </div>
+      </div>
+
+      <!-- Gastroenterology -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26 18C20 20 14 28 14 38C14 52 24 66 38 66C52 66 66 55 66 42C66 30 58 22 50 22C44 22 42 28 38 28C34 28 32 18 26 18Z" fill="#FFD7D7" stroke="#E05555" stroke-width="2.2"/>
+            <path d="M28 40Q32 36 36 40" stroke="#E05555" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <path d="M44 40Q48 36 52 40" stroke="#E05555" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+            <path d="M34 50Q40 55 46 50" stroke="#E05555" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="area-title">Gastroenterology</div>
+        <p class="area-desc">Gentle, effective constipation and digestive relief — triple-action laxative, gut-safe and fast-acting.</p>
+        <div class="area-tags">
+          <span class="area-tag">PARAMAGIC+</span>
+        </div>
+      </div>
+
+      <!-- Gynecology -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 20C33 20 27 25 27 35C27 44 33 50 40 52C47 50 53 44 53 35C53 25 47 20 40 20Z" fill="#E8D4FF" stroke="#9B59B6" stroke-width="2.2"/>
+            <path d="M27 42C20 40 14 34 14 28" stroke="#9B59B6" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <circle cx="12" cy="26" r="7" fill="#C9A0DC" stroke="#9B59B6" stroke-width="2"/>
+            <path d="M53 42C60 40 66 34 66 28" stroke="#9B59B6" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <circle cx="68" cy="26" r="7" fill="#C9A0DC" stroke="#9B59B6" stroke-width="2"/>
+            <line x1="40" y1="52" x2="40" y2="64" stroke="#9B59B6" stroke-width="2.2" stroke-linecap="round"/>
+            <path d="M33 64H47" stroke="#9B59B6" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="area-title">Gynecology</div>
+        <p class="area-desc">Advanced reproductive health supplement enhancing fertility, sperm motility, egg quality and hormonal wellness.</p>
+        <div class="area-tags">
+          <span class="area-tag">REVACREST</span>
+        </div>
+      </div>
+
+      <!-- Orthopedics -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="24" y="36" width="32" height="8" rx="4" fill="#B3D9FF" stroke="#4A90D9" stroke-width="2"/>
+            <circle cx="18" cy="30" r="9" fill="#D4EAFF" stroke="#4A90D9" stroke-width="2"/>
+            <circle cx="18" cy="50" r="9" fill="#D4EAFF" stroke="#4A90D9" stroke-width="2"/>
+            <circle cx="62" cy="30" r="9" fill="#D4EAFF" stroke="#4A90D9" stroke-width="2"/>
+            <circle cx="62" cy="50" r="9" fill="#D4EAFF" stroke="#4A90D9" stroke-width="2"/>
+            <rect x="24" y="26" width="32" height="28" rx="0" fill="#B3D9FF" stroke="none"/>
+            <rect x="24" y="26" width="32" height="28" rx="0" fill="url(#bone-grad)"/>
+            <defs>
+              <linearGradient id="bone-grad" x1="24" y1="26" x2="56" y2="54">
+                <stop offset="0%" stop-color="#D4EAFF"/>
+                <stop offset="100%" stop-color="#B3D9FF"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="area-title">Orthopedics</div>
+        <p class="area-desc">High-bioavailability calcium, Vitamin D3 and minerals for bone density, joint health and osteoporosis prevention.</p>
+        <div class="area-tags">
+          <span class="area-tag">CALSTART</span>
+          <span class="area-tag">HOLD-D3</span>
+        </div>
+      </div>
+
+      <!-- Nutraceuticals -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M38 12C38 12 18 24 18 44C18 58 28 68 40 68C52 68 62 58 62 44C62 24 42 12 38 12Z" fill="#C8F0C0" stroke="#3DAA3D" stroke-width="2.2"/>
+            <path d="M40 14Q38 40 36 68" stroke="#3DAA3D" stroke-width="1.6" stroke-linecap="round"/>
+            <path d="M39 32Q30 28 23 30" stroke="#3DAA3D" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            <path d="M38 44Q28 40 21 43" stroke="#3DAA3D" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            <path d="M39 55Q30 52 24 54" stroke="#3DAA3D" stroke-width="1.4" stroke-linecap="round" fill="none"/>
+            <path d="M56 56Q54 60 56 64Q58 60 56 56Z" fill="#5AAAD4"/>
+            <path d="M64 48Q62 53 64 58Q66 53 64 48Z" fill="#5AAAD4"/>
+          </svg>
+        </div>
+        <div class="area-title">Nutraceuticals</div>
+        <p class="area-desc">Science-backed nutritional formulas for iron deficiency, anaemia, general wellness and appetite stimulation.</p>
+        <div class="area-tags">
+          <span class="area-tag">LIPOTHIK</span>
+          <span class="area-tag">VITHOLD-L</span>
+        </div>
+      </div>
+
+      <!-- Neurology -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="30" cy="40" rx="16" ry="20" fill="#FFB3C6" stroke="#E05080" stroke-width="2.2"/>
+            <ellipse cx="50" cy="40" rx="16" ry="20" fill="#FF8FAB" stroke="#E05080" stroke-width="2.2"/>
+            <line x1="40" y1="20" x2="40" y2="60" stroke="#E05080" stroke-width="1.8"/>
+            <path d="M22 33Q26 38 22 43" stroke="#E05080" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            <path d="M22 36Q26 40 22 44" stroke="#E05080" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <path d="M58 33Q54 38 58 43" stroke="#E05080" stroke-width="1.4" fill="none" stroke-linecap="round"/>
+            <path d="M58 36Q54 40 58 44" stroke="#E05080" stroke-width="1" fill="none" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="area-title">Neurology</div>
+        <p class="area-desc">Advanced neuroprotective therapy for peripheral and diabetic neuropathy, nerve pain and cognitive support.</p>
+        <div class="area-tags">
+          <span class="area-tag">PREGAHOLD-PLUS</span>
+        </div>
+      </div>
+
+      <!-- General Medicine -->
+      <div class="area-card reveal">
+        <div class="area-icon">
+          <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="14" y="28" width="52" height="40" rx="9" fill="#D4E9FF" stroke="#1a6fa8" stroke-width="2.2"/>
+            <path d="M30 28Q30 19 40 19Q50 19 50 28" stroke="#1a6fa8" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+            <rect x="36" y="37" width="8" height="22" rx="4" fill="#E05555"/>
+            <rect x="27" y="45" width="26" height="8" rx="4" fill="#E05555"/>
+          </svg>
+        </div>
+        <div class="area-title">General Medicine</div>
+        <p class="area-desc">Dual-action antihypertensive for blood pressure control and reduction of cardiac episodes — trusted and effective.</p>
+        <div class="area-tags">
+          <span class="area-tag">TELIBA-AM</span>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1321,7 +1569,7 @@
       </div>
       <div class="pillar reveal">
         <h3>Competitive pricing.</h3>
-        <p>Fair, consistent pricing backed by direct manufacturer relationships — no inflated middle layers.</p>
+        <p>Fair, consistent pricing backed by direct doctor relationships — no inflated middle layers.</p>
       </div>
       <div class="pillar reveal">
         <h3>Cold chain integrity.</h3>
@@ -1329,7 +1577,7 @@
       </div>
       <div class="pillar reveal">
         <h3>A direct line to the owner.</h3>
-        <p>No call centres. No ticket numbers. Sanjeev himself picks up the phone when it rings.</p>
+        <p>No call centres. No ticket numbers. Our leadership personally picks up the phone when it rings.</p>
       </div>
     </div>
   </div>
